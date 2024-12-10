@@ -26,5 +26,9 @@ body {
 }
 #mainBox {
     width: 100%;
-    background-color: orangered;
+
+    background-image: url(../media/bg/homeBG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }

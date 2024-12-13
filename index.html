@@ -6,18 +6,32 @@
     <title>Mission to Mars Apphub</title>
 
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
     
-    <!-- Left/Navigation Bar Code -->
-    <div class="primary-container" id="headerBox">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+    <!-- Left/Header/Navigation Bar Code -->
+    <header>
+        <div id="logoBox">
+            <a href="#"><img src="media/images/rfsa_logo.png" alt="Red Frontier Space Agency Logo"></a>
+        </div>
+
+        <div id="navBox">
+            <div class="navItem" id="ni1" onclick="location.replace('pages/informatie.html')">Informatie</div>
+            <div class="navItem" id="ni2" onclick="location.replace('pages/faciliteiten.html')">Faciliteiten</div>
+            <div class="navItem" id="ni3" onclick="location.replace('pages/recreatie.html')">Recreatie</div>
+            <div class="navItem" id="ni4" onclick="location.replace('pages/tickets.html')">Tickets</div>
+            <div class="navItem" id="ni5" onclick="location.replace('pages/overOns.html')">Over Ons</div>
+        </div>
+
+        <div id="footerBox"></div>
+    </header>
+
 
     <!-- Page Content Code -->
-    <div class="primary-container" id="mainBox"></div>
+    <main></main>
+
     
+    <script src="scripts/main.js"></script>
 </body>
 </html>

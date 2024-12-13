@@ -12,23 +12,47 @@ html, body {
 }
 body {
     display: flex;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: #eaeaea;
 }
 
 
 /* Primary Boxes Styling */
-.primary-container {
+header, main {
     height: 100vh;
 }
-
-#headerBox {
+header {
     background-color: #262626;
     width: 15vw;
 }
-#mainBox {
+main {
+    width: 100%;
+}
+
+
+/* Header Internal Styling */
+#logoBox {
+    padding: 10px;
+}
+#logoBox img {
     width: 100%;
 
-    background-image: url(../media/bg/homeBG.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#navBox {
+    width: 100%;
+    background-color: #363636;
+
+    font-size: 40px;
+    text-align: center;
+}
+.navItem:hover {
+    background-color: #262626;
+    cursor: pointer;
 }

@@ -41,11 +41,30 @@ body {
 
 .title-font {
     font-family: "Audiowide";
+    font-size: 40px;
 }
 .navbar-font {
     font-family: "Orbitron";
 }
 
+.hor-line, .vert-line {
+    background-color: #eaeaea;
+    opacity: 0.5;
+}
+.hor-line {
+    height: 1px;
+    width: 100%;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.vert-line {
+    width: 1px;
+    height: 100%;
+
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
 
 
@@ -145,4 +164,7 @@ main {
     
     display: flex;
     align-items: center;
+}
+#titleDivider {
+    height: 150%;
 }

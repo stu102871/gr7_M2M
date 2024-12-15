@@ -13,10 +13,10 @@
     <!-- Left/Header/Navigation Bar Code -->
     <header>
         <div id="logoBox">
-            <a href="#"><img src="media/images/rfsa_logo.png" alt="Red Frontier Space Agency Logo"></a>
+            <img src="media/images/logo_rfsa.png" alt="Red Frontier Space Agency Logo" onclick="location.replace('index.html')">
         </div>
 
-        <div id="navBox">
+        <div class="navbar-font" id="navBox">
             <div class="navItem" id="ni1" onclick="location.replace('pages/informatie.html')">Informatie</div>
             <div class="navItem" id="ni2" onclick="location.replace('pages/faciliteiten.html')">Faciliteiten</div>
             <div class="navItem" id="ni3" onclick="location.replace('pages/recreatie.html')">Recreatie</div>
@@ -29,7 +29,17 @@
 
 
     <!-- Page Content Code -->
-    <main></main>
+    <main>
+        <div id="titleOuterBox">
+            <div class="title-font" id="titleInnerBox">
+                <h1>Red Frontier</h1>
+                <div class="vert-line"></div>
+                <h1></h1>
+            </div>
+        </div>
+
+        <div id="contentBox"></div>
+    </main>
 
     
     <script src="scripts/main.js"></script>

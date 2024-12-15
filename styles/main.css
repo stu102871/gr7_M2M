@@ -1,4 +1,22 @@
-/* Global Styling */
+/* Custom Fonts */
+@font-face {
+    font-family: "Audiowide";
+    src: url(../media/fonts/Audiowide.ttf);
+}
+@font-face {
+    font-family: "Orbitron";
+    src: url(../media/fonts/Orbitron.ttf);
+}
+@font-face {
+    font-family: "Exo2";
+    src: url(../media/fonts/Exo2.ttf);
+}
+
+
+
+
+
+/* Global */
 * {
     margin: 0;
     padding: 0;
@@ -17,42 +35,114 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
+    font-family: "Exo2";
     color: #eaeaea;
 }
 
+.title-font {
+    font-family: "Audiowide";
+}
+.navbar-font {
+    font-family: "Orbitron";
+}
 
-/* Primary Boxes Styling */
+
+
+
+
+/* Primary Boxes */
 header, main {
     height: 100vh;
 }
 header {
     background-color: #262626;
-    width: 15vw;
+    width: 18vw;
 }
 main {
     width: 100%;
 }
 
 
-/* Header Internal Styling */
+
+
+
+/* Logo Div */
 #logoBox {
-    padding: 10px;
+    height: 22%;
+    padding: 20px;
 }
+
 #logoBox img {
-    width: 100%;
+    height: 100%;
 
     margin-left: 50%;
     transform: translateX(-50%);
+
+    transition: all 0.2s ease;
+}
+#logoBox img:hover {
+    cursor: pointer;
+    transform: translateX(-50%) scale(1.1);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
 }
 
+
+
+/* Nav Div */
 #navBox {
     width: 100%;
+    height: 60%;
     background-color: #363636;
 
-    font-size: 40px;
-    text-align: center;
+    font-size: 30px;
+}
+
+.navItem {
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .navItem:hover {
     background-color: #262626;
     cursor: pointer;
+}
+
+#ni1, #ni2, #ni3, #ni4 {
+    border-bottom: 1px solid #262626;
+}
+
+
+
+/* Footer Div */
+#footerBox {
+    height: 18%;
+}
+
+
+
+
+
+/* Page Title Div */
+#titleOuterBox {
+    height: 22%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#titleInnerBox {
+    width: 90%;
+    height: 70%;
+
+    padding: 50px;
+
+    background-color: #363636;
+    border-radius: 50px;
+    
+    display: flex;
+    align-items: center;
 }

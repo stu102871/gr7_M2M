@@ -137,6 +137,32 @@ main {
 /* Footer Div */
 #footerBox {
     height: 18%;
+    width: 100%;
+
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nameBox {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.nameRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -5px;
+}
+.divider {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#year {
+    opacity: 0.5;
+    margin-top: 20px;
 }
 
 
@@ -167,4 +193,14 @@ main {
 }
 #titleDivider {
     height: 150%;
+}
+
+
+
+
+
+/* Page Content Div */
+#contentBox {
+    height: 78%;
+    width: 100%;
 }

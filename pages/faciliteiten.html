@@ -3,13 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Red Frontier App - Faciliteiten</title>
 
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/faciliteiten.css">
 </head>
 <body>
     
-    <script src="../scripts/main.js"></script>
+    <!-- Left/Header/Navigation Bar Code -->
+    <header>
+        <div id="logoBox">
+            <img src="../media/images/logo_rfsa.png" alt="Red Frontier Space Agency Logo" onclick="location.replace('../index.html')">
+        </div>
+
+        <div class="navbar-font" id="navBox">
+            <div class="navItem" id="ni1" onclick="location.replace('informatie.html')">Informatie</div>
+            <div class="navItem" id="ni2" onclick="location.replace('faciliteiten.html')">Faciliteiten</div>
+            <div class="navItem" id="ni3" onclick="location.replace('recreatie.html')">Recreatie</div>
+            <div class="navItem" id="ni4" onclick="location.replace('tickets.html')">Tickets</div>
+            <div class="navItem" id="ni5" onclick="location.replace('overOns.html')">Over Ons</div>
+        </div>
+
+        <div id="footerBox">
+            <div>
+                <p>M2M Dev Studio</p>
+
+                <div id="nameBox">
+                    <div class="nameRow">
+                        <p>Tayrin</p>
+                        <p class="divider">|</p>
+                        <p>Salah</p>
+                    </div>
+                    <div class="nameRow">
+                        <p>Fabiana</p>
+                        <p class="divider">|</p>
+                        <p>Emilios</p>
+                    </div>
+                </div>
+
+                <p>Red Frontier Space Agency</p>
+
+                <p id="year">2025</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Page Content Code -->
+    <main>
+        <div id="titleOuterBox">
+            <div class="title-font" id="titleInnerBox">
+                Red Frontier
+                <div class="vert-line" id="titleDivider"></div>
+                Faciliteiten
+            </div>
+        </div>
+
+        <div id="contentBox"></div>
+    </main>
+    
 </body>
 </html>

@@ -1,3 +1,210 @@
 body {
     background-image: url(../media/images/bg/bg_faciliteiten.jpg);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+
+.faciliteit1 {
+    width: 380px; 
+    height: 300px; 
+    border: 30px solid #333; /* Border color and thickness */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #333; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  
+    color: white; 
+
+    /*positie box */
+    position: absolute;
+    top: 200px;
+    left:410px;
+  }
+
+.factexth1{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 10px; /* 50px from the top of the box */
+        left: 30px;
+        font-size: 30px;
+}
+.factextp1{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 60px; /* 50px from the top of the box */
+        left: 30px;
+}
+
+.faciliteit2 {
+    width: 380px; 
+    height: 300px; 
+    border: 30px solid #333; /* Border color and thickness */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #333; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  
+    color: white; 
+
+    /*positie box */
+    position: absolute;
+    top: 200px;
+    left:910px;
+  }
+
+.factexth2{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 10px; /* 50px from the top of the box */
+        left: 10px;
+        font-size: 30px;
+}
+.factextp2{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 60px; /* 50px from the top of the box */
+        left: 10px;
+}
+.faciliteit3 {
+    width: 380px; 
+    height: 300px; 
+    border: 30px solid #333; /* Border color and thickness */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #333; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  
+    color: white; 
+
+    /*positie box */
+    position: absolute;
+    top: 550px;
+    left:410px;
+  }
+
+.factexth3{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 10px; /* 50px from the top of the box */
+        left: 30px;
+        font-size: 30px;
+}
+.factextp3{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 60px; /* 50px from the top of the box */
+        left: 30px;
+}
+.faciliteit4 {
+    width: 380px; 
+    height: 300px; 
+    border: 30px solid #333; /* Border color and thickness */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #333; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  
+    color: white; 
+
+    /*positie box */
+    position: absolute;
+    top: 550px;
+    left:910px;
+  }
+
+.factexth4{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 10px; /* 50px from the top of the box */
+        left: 30px;
+        font-size: 30px;
+}
+.factextp4{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 60px; /* 50px from the top of the box */
+        left: 30px;
+}
+.faciliteit5 {
+    width: 380px; 
+    height: 300px; 
+    border: 30px solid #333; /* Border color and thickness */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #333; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  
+    color: white; 
+
+    /*positie box */
+    position: absolute;
+    top: 900px;
+    left:410px;
+  }
+
+.factexth5{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 10px; /* 50px from the top of the box */
+        left: 30px;
+        font-size: 30px;
+}
+.factextp5{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 60px; /* 50px from the top of the box */
+        left: 30px;
+}
+.faciliteit6 {
+    width: 380px; 
+    height: 300px; 
+    border: 30px solid #333; /* Border color and thickness */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #333; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  
+    color: white; 
+
+    /*positie box */
+    position: absolute;
+    top: 900px;
+    left:910px;
+  }
+
+.factexth6{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 10px; /* 50px from the top of the box */
+        left: 30px;
+        font-size: 30px;
+}
+.factextp6{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 60px; /* 50px from the top of the box */
+        left: 30px;
+}
+
+.menu{
+    width: 450px; 
+    height: 910px; 
+    border: 30px solid #333; /* Border color and thickness */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px; /* Space inside the box */
+    background-color: #333; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+  
+    color: white; 
+
+    /*positie box */
+    position: absolute;
+    top: 200px;
+    left:1500px;
+  }
+
+.menuh1{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 10px; 
+        left: 50px;
+        font-size: 30px;
+}
+.menup1{
+    position: absolute; /* Position relative to .faciliteit1 */
+        top: 60px; 
+        left: 150px;
 }

@@ -1,0 +1,15 @@
+body {
+    background-image: url(../../media/images/bg/bg_recreatie.png);
+}
+
+
+#gameBox {
+    width: 90%;
+    height: 52%;
+    
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #363636;
+    border-radius: 50px;
+}

@@ -3,6 +3,9 @@ body {
 }
 
 
+
+
+
 #gameBox {
     width: 90%;
     height: 52%;
@@ -12,9 +15,65 @@ body {
 
     background-color: #363636;
     border-radius: 50px;
+    padding: 50px;
+
+    display: flex;
 }
 
-#recreatieBox {
+
+
+#gameBoxLeft {
+    width: 70%;
+    height: 100%;
+}
+
+#gameSystemBox {
+    font-size: 30px;
+}
+#gameTitleLine {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#gameBottomBox {
+    height: 78%;
+    width: 100%;
+
+    display: flex;
+}
+#selectBox {
+    height: 100%;
+    width: 21%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#gameBoxLine {
+    height: 100%;
+    align-self: center;
+}
+
+
+#gameBoxRight {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#gameImg {
+    width: 100%;
+}
+
+
+
+
+
+#recBox {
     width: 77%;
     height: 35%;
 
@@ -25,5 +84,28 @@ body {
     background-color: #363636;
     border-radius: 50px;
 
-    display: none; /* Temp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
+.recItem {
+    height: 83%;
+    width: 20%;
+
+    background-color: white;
+    border-radius: 25px;
+
+    transition: all 0.2s ease;
+
+    /* Temp */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.recItem:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }

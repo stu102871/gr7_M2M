@@ -61,46 +61,47 @@
 
         <div id="contentBox">
             <div id="gameBox">
-                <div id="gameSystemBox">On-Flight Entertainment System (OFES)</div>
+                <div id="gameBoxLeft">
+                    <div id="gameSystemBox" class="title-font">On-Flight Entertainment System (OFES)</div>
 
-                <div id="gameBottomBox">
-                    <div id="selectOuterBox">
-                        <div id="selectInnerBox">
-                            <img src="" alt="Pijl omhoog">
+                    <div class="hor-line" id="gameTitleLine"></div>
 
-                            <div id="numberBox">
-                                <p class="selectorNumber" id="index"></p>
-                                <p class="selectorNumber">/</p>
-                                <p class="selectorNumber">1</p>
+                    <div id="gameBottomBox">
+                        <div id="selectBox">
+                            <div id="selectInnerBox">
+                                <img src="" alt="Pijl omhoog">
+
+                                <div id="numberBox">
+                                    <p class="selectorNumber" id="index"></p>
+                                    <p class="selectorNumber">/</p>
+                                    <p class="selectorNumber">1</p>
+                                </div>
+
+                                <img src="" alt="Pijl omlaag">
                             </div>
-
-                            <img src="" alt="Pijl omlaag">
                         </div>
-                    </div>
 
-                    <div id="gameInfoBox">
-                        <h2 id="gameTitle"></h2>
-                        <p id="gameInfo"></p>
+                        <div class="vert-line" id="infoDivider"></div>
+
+                        <div id="gameInfoBox">
+                            <h2 id="gameTitle" class="title-font">game</h2>
+                            <p id="gameInfo">info</p>
+                        </div>
                     </div>
                 </div>
 
-                <div id="gameImgBox">
+                <div class="vert-line" id="gameBoxLine"></div>
+
+                <div id="gameBoxRight">
                     <img src="" alt="Game Plaatje" id="gameImg">
                 </div>
             </div>
 
-            <div id="recreatieBox">
-                
-            </div>
-
-            <div id="temp" style="margin-left: 20%;">
-                <h1>Link naar (zolang Tayrin de echte links nog niet heeft toegevoegd):</h1>
-                <ul>
-                    <h2><li><a href="recreatie_items/ebooks.html" style="color: white;">ebooks</a></li></h2>
-                    <h2><li><a href="recreatie_items/muziek.html" style="color: white;">muziek</a></li></h2>
-                    <h2><li><a href="recreatie_items/series.html" style="color: white;">series</a></li></h2>
-                    <h2><li><a href="recreatie_items/videos.html" style="color: white;">videos</a></li></h2>
-                </ul>
+            <div id="recBox">
+                <div class="recItem" id="rec-ebooks" onclick="location.replace('recreatie_items/ebooks.html')">eBooks</div>
+                <div class="recItem" id="rec-muziek" onclick="location.replace('recreatie_items/muziek.html')">Muziek</div>
+                <div class="recItem" id="rec-series" onclick="location.replace('recreatie_items/series.html')">Series</div>
+                <div class="recItem" id="rec-videos" onclick="location.replace('recreatie_items/videos.html')">Videos</div>
             </div>
         </div>
     </main>

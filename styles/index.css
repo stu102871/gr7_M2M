@@ -1,3 +1,75 @@
 body {
     background-image: url(../media/images/bg/bg_hub.png);
 }
+
+
+
+#contentBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6%;
+}
+
+.boxItem {
+    width: 29%;
+    height: 42%;
+
+    position: relative; /* Allows .boxItemText to position correctly */
+    
+    border: 5px solid #363636;
+    border-radius: 50px;
+    margin: 3px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: all 0.2s ease;
+}
+.boxItem:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+#bi1 { background-image: url(../media/images/hub/infoButton.png); }
+#bi2 { background-image: url(../media/images/hub/dagbestedingButton.jpg); }
+#bi3 { background-image: url(../media/images/hub/recreatieButton.png); }
+#bi4 { background-image: url(../media/images/hub/ticketsButton.png); }
+
+.boxItemText {
+    width: 100%;
+    height: 23%;
+
+    position: absolute;
+    bottom: 0;
+
+    background-color: rgba(54, 54, 54, 0.8);
+    border-top: 5px solid #363636;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    /* Center the text inside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media only screen and (max-width: 1400px) {
+
+    #contentBox { gap: 5%; }
+    .boxItem { width: 35%; } 
+}
+@media only screen and (max-width: 1200px) {
+
+    #contentBox { gap: 4%; }
+    .boxItem { width: 40%; } 
+}
+@media only screen and (max-width: 1000px) {
+
+    #contentBox { gap: 3%; }
+    .boxItem { width: 45%; }
+}

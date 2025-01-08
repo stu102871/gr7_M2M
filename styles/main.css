@@ -76,6 +76,7 @@ header, main {
 header {
     background-color: #262626;
     width: 18vw;
+    user-select: none;
 }
 main {
     width: 100%;

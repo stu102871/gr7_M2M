@@ -4,9 +4,22 @@
 
 // Variable Prep
 
-const output = {
-    img  : document.getElementById("gameImg"),
+const selectBox = {
+    index: document.getElementById("index"),
+    arrow: [document.getElementById("arrowUp"), document.getElementById("arrowDown")]
+};
+
+const gameOutput = {
     title: document.getElementById("gameTitle"),
     info : document.getElementById("gameInfo"),
-    index: document.getElementById("index")
+    img  : document.getElementById("gameImg")
+};
+
+
+
+// Functions
+
+function gameChange(btn) {
+
+    
 }

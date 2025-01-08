@@ -43,11 +43,41 @@ body {
 }
 #selectBox {
     height: 100%;
-    width: 21%;
+    width: 12%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#selectInnerBox {
+    width: 55%;
+    height: 82%;
+}
+#selectInnerBox img {
+    width: 100%;
+    height: 27%;
+
+    opacity: 0.5;
+}
+#arrowUp {
+    transform: scaleY(-1);
+}
+#numberBox {
+    width: 100%;
+    height: 46%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#numberBox p {
+    width: 100%;
+    text-align: center;
+}
+
+#gameTitle {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 

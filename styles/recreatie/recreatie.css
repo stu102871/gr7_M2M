@@ -59,6 +59,10 @@ body {
 
     opacity: 0.5;
 }
+#selectInnerBox img:hover {
+    cursor: pointer;
+    opacity: 1;
+}
 #arrowUp {
     transform: scaleY(-1);
 }

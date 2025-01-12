@@ -31,50 +31,64 @@ const gameOutput = {
     title : document.getElementById("gameTitle"),
     info  : document.getElementById("gameInfo"),
     img   : document.getElementById("gameImg"),
-    script: document.getElementById("gameScript"),
+    script: undefined,
 
     // Display selected game info
-    write: function() {
+    write : function() {
 
         this.title.innerHTML = `OFES ${games[cGame].title}`;
         this.info.innerHTML  = games[cGame].info;
         this.img.src         = `../images/recreatie/games/${games[cGame].img}`;
 
         selectBox.index.innerHTML = cGame+1;
+    },
+    
+    loadScript  : function() {
+
+        this.script = document.createElement("script");
+        this.script.src = `../scripts/games/${games[cGame].img}.js`;
+        this.script.type = 'text/javascript';
+        this.script.async = true;
+
+        document.body.appendChild(this.script);
+    },
+    unloadScript: function() {
+
+        // Reset the game that is being terminated (the variables of the game remain active because they're cluttering up the global scope. This would be too time consuming to fix properly, so now I use it as an excuse to save high scores between play sessions)
+        if (typeof game !== undefined) game.restart();
+
+        this.script.remove();
+        this.script = undefined;
     }
 };
 
 const popup = {
     element : document.getElementById("gamePopup"),
     content : document.getElementById("popupMain"),
-    title   : document.getElementById("popupTitle"),
     closeBtn: document.getElementById("popupClose"),
 
+    script  : undefined,
     loaded  : false,
 
-    load  : function() {
+    load    : function() {
 
         if (!this.loaded) {
 
             this.element.style.display = "flex";
-            this.title.innerHTML = `OFES ${games[cGame].title}`;
 
-            gameOutput.script.src = `games/${games[cGame].img}`;
-
+            gameOutput.loadScript();
             this.loaded = true;
         
         }
     },
-    unload: function() {
+    unload  : function() {
 
         if (this.loaded) {
 
             this.element.style.display = "none";
-            this.title.innerHTML = "";
             this.content.innerHTML = "";
 
-            gameOutput.script.src = "";
-
+            gameOutput.unloadScript();
             this.loaded = false;
 
         }
@@ -98,6 +112,10 @@ function selector(next) {
     }
 }
 
+// Prepare p5 functions for future use
+function setup() {}
+function draw() {}
+
 
 
 
@@ -107,7 +125,7 @@ function selector(next) {
 selectBox.arrow[0].addEventListener("click", () => selector(false));
 selectBox.arrow[1].addEventListener("click", () => selector(true));
 
-document.addEventListener("keypress", (event) => {
+document.addEventListener("keydown", (event) => {
 
     if (event.key == "ArrowUp") selector(false);
     else if (event.key == "ArrowDown") selector(true);
@@ -118,6 +136,11 @@ gameOutput.img.addEventListener("click", () => popup.load());
 
 // Close the game
 popup.closeBtn.addEventListener("click", () => popup.unload());
+popup.element.addEventListener("click", (event) => {
+
+    if (event.target === popup.element) popup.unload();
+})
+
 
 
 

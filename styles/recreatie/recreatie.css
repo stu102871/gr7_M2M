@@ -214,19 +214,17 @@ body {
 
     position: relative;
     padding: 50px;
+    padding-top: 20px;
 }
 .close-button {
-    position: absolute;
-    right: 50px;
-    top: 20px;
-    
+    height: 80px;
     font-size: 80px;
-    opacity: 0.25;
+    opacity: 0.5;
 
     user-select: none;
 }
 .close-button:hover {
-    opacity: 0.5;
+    opacity: 1;
     cursor: pointer;
 }
 

@@ -201,8 +201,9 @@ body {
 
 #popupContent {
     width: fit-content;
-    min-width: 400px;
     height: fit-content;
+    min-width: 625px;
+    min-height: 500px;
 
     background-color: #363636;
     border-radius: 50px;
@@ -211,12 +212,12 @@ body {
     flex-direction: column;
     align-items: center;
 
+    position: relative;
     padding: 50px;
 }
-
 .close-button {
     position: absolute;
-    right: 20px;
+    right: 50px;
     top: 20px;
     
     font-size: 80px;

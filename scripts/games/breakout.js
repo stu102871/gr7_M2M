@@ -71,6 +71,47 @@ if (typeof game === "undefined") {
     // Background Stars Setup
     var starData = [];
 
+} else {
+
+    game = {
+        start : false,
+        paused: true,
+    
+        size  : changeScreen(),
+    
+        player: {
+            score   : 0,
+            h_score : 0,
+            lives   : 3,
+            b_broken: 0,
+            powerup : 0
+        },
+    
+        level : {
+            total  : 4,
+            current: undefined,
+            sub    : 0,
+            mod    : undefined
+        },
+    
+        restart: function() {
+        
+            this.start = false;
+            this.paused = true;
+        
+            if (this.player.score > this.player.h_score) this.player.h_score = this.player.score;
+            this.player.score = 0;
+            this.player.lives = 3;
+            this.player.b_broken = 0;
+            this.player.powerup = 0;
+            this.level.sub = 0;
+            this.level.current = undefined;
+        
+            // Bug fix
+            keys = {};
+        }
+    };
+
 }
     
     

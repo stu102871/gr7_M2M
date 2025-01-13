@@ -12,48 +12,49 @@ I hope I will remember to pay closer mind to which type of declaration to use no
 
 /* GLOBAL VARIABLES */
 
-if (typeof game === "undefined") {
+// Meta Objects
+game = {
+    start : false,
+    paused: true,
 
-    // Meta Objects
-    var game = {
-        start : false,
-        paused: true,
+    size  : changeScreen(),
+
+    player: {
+        score   : 0,
+        h_score : h_scores.breakout,
+        lives   : 3,
+        b_broken: 0,
+        powerup : 0
+    },
+
+    level : {
+        total  : 4,
+        current: undefined,
+        sub    : 0,
+        mod    : undefined
+    },
+
+    restart: function() {
     
-        size  : changeScreen(),
+        this.start = false;
+        this.paused = true;
     
-        player: {
-            score   : 0,
-            h_score : 0,
-            lives   : 3,
-            b_broken: 0,
-            powerup : 0
-        },
+        if (this.player.score > this.player.h_score) this.player.h_score = this.player.score;
+        h_scores.breakout = this.player.h_score;
+        this.player.score = 0;
+        this.player.lives = 3;
+        this.player.b_broken = 0;
+        this.player.powerup = 0;
+        this.level.sub = 0;
+        this.level.current = undefined;
     
-        level : {
-            total  : 4,
-            current: undefined,
-            sub    : 0,
-            mod    : undefined
-        },
-    
-        restart: function() {
-        
-            this.start = false;
-            this.paused = true;
-        
-            if (this.player.score > this.player.h_score) this.player.h_score = this.player.score;
-            this.player.score = 0;
-            this.player.lives = 3;
-            this.player.b_broken = 0;
-            this.player.powerup = 0;
-            this.level.sub = 0;
-            this.level.current = undefined;
-        
-            // Bug fix
-            keys = {};
-        }
-    };
-    
+        // Bug fix
+        keys = {};
+    }
+};
+
+if (typeof menuBoxData === "undefined") {
+
     var menuBoxData = {};
     var menuBoxes = [];
     
@@ -70,47 +71,6 @@ if (typeof game === "undefined") {
     
     // Background Stars Setup
     var starData = [];
-
-} else {
-
-    game = {
-        start : false,
-        paused: true,
-    
-        size  : changeScreen(),
-    
-        player: {
-            score   : 0,
-            h_score : 0,
-            lives   : 3,
-            b_broken: 0,
-            powerup : 0
-        },
-    
-        level : {
-            total  : 4,
-            current: undefined,
-            sub    : 0,
-            mod    : undefined
-        },
-    
-        restart: function() {
-        
-            this.start = false;
-            this.paused = true;
-        
-            if (this.player.score > this.player.h_score) this.player.h_score = this.player.score;
-            this.player.score = 0;
-            this.player.lives = 3;
-            this.player.b_broken = 0;
-            this.player.powerup = 0;
-            this.level.sub = 0;
-            this.level.current = undefined;
-        
-            // Bug fix
-            keys = {};
-        }
-    };
 
 }
     

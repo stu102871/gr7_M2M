@@ -17,6 +17,12 @@ const games =
             Het originele Breakout werd ontwikkeld door Atari, met medewerking van Steve Wozniak en Steve Jobs, en verscheen voor het eerst op arcade-machines op 13 mei, 1976. <br/>
             Het spel werd al snel een klassieker en inspireerde talloze varianten op verschillende platforms. Met eenvoudige maar verslavende gameplay werd Breakout een mijlpaal in de geschiedenis van videogames en blijft het tot op de dag van vandaag een absolute klassieker!`,
         img   : "breakout" // Moet nog worden toegevoegd
+    },
+    {
+        id   : 2,
+        title: "CombiGame Placeholder",
+        info : "Placeholder Text",
+        img  : ""
     }
 ];
 document.getElementById("gTotal").innerHTML = games.length;
@@ -95,6 +101,13 @@ const popup = {
     }
 };
 
+// Prepare global Game Objects
+let game = {};
+
+let h_scores = {
+    breakout: 0
+}
+
 
 
 
@@ -122,13 +135,13 @@ function draw() {}
 // Event Listeners
 
 // Select through games
-selectBox.arrow[0].addEventListener("click", () => selector(false));
-selectBox.arrow[1].addEventListener("click", () => selector(true));
+selectBox.arrow[0].addEventListener("click", () => selector(true));
+selectBox.arrow[1].addEventListener("click", () => selector(false));
 
 document.addEventListener("keydown", (event) => {
 
-    if (event.key == "ArrowUp") selector(false);
-    else if (event.key == "ArrowDown") selector(true);
+    if (event.key == "ArrowUp") selector(true);
+    else if (event.key == "ArrowDown") selector(false);
 });
 
 // Start the game

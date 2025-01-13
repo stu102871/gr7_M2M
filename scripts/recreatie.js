@@ -38,7 +38,7 @@ const gameOutput = {
 
         this.title.innerHTML = `OFES ${games[cGame].title}`;
         this.info.innerHTML  = games[cGame].info;
-        this.img.src         = `../images/recreatie/games/${games[cGame].img}`;
+        this.img.src         = `../media/images/recreatie/games/${games[cGame].img}.png`;
 
         selectBox.index.innerHTML = cGame+1;
     },

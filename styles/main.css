@@ -217,14 +217,11 @@ main {
 }
 
 #secondTitleInnerBox {
-    width: 90%;
-    height: 50%;
-
+    width: 1500px;
+    height: 150px;
     padding: 50px;
-
     background-color: #363636;
     border-radius: 50px;
-    
     display: flex;
     align-items: center;
 }

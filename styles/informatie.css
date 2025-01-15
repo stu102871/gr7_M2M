@@ -1,3 +1,50 @@
 body {
     background-image: url(../media/images/bg/bg_info.png);
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#gameBox {
+    display: flex;
+    flex-direction: column; /* Items standaard onder elkaar */
+    gap: 2px; /* Ruimte tussen de divs */
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto; /* Centreer de box op de pagina */
+    background-color: #363636;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+#gameImg {
+    max-width: 100%;
+    border-radius: 100px;
+}
+
+/* Responsive layout: divs naast elkaar op grotere schermen */
+@media (min-width: 768px) {
+    #gameBox {
+        flex-direction: row; /* Items naast elkaar */
+        justify-content: space-between;
+    }
+
+    #gameBoxRight {
+        width: 30%; /* Geef beide divs 45% van de breedte */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+.vertInfoLine {
+    height: 350px; /* % werkt niet, gebruik px om perfect te laten passen */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.horInfoLine {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

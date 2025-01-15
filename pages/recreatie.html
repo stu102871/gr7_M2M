@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/recreatie/recreatie.css">
+
+    <script src="../scripts/games/libraries/p5.min.js"></script>
+    <script src="../scripts/games/libraries/p5.sound.min.js"></script>
 </head>
 <body>
     
@@ -72,9 +75,9 @@
                                 <img src="../media/images/recreatie/arrow.png" alt="Pijl omhoog" id="arrowUp">
 
                                 <div id="numberBox">
-                                    <p class="selectorNumber title-font" id="index"></p>
+                                    <p class="selectorNumber title-font" id="gIndex"></p>
                                     <p class="selectorNumber title-font">/</p>
-                                    <p class="selectorNumber title-font">1</p>
+                                    <p class="selectorNumber title-font" id="gTotal"></p>
                                 </div>
 
                                 <img src="../media/images/recreatie/arrow.png" alt="Pijl omlaag" id="arrowDown">
@@ -105,6 +108,17 @@
             </div>
         </div>
     </main>
+
+    <div id="gamePopup">
+        <div id="popupContent">
+            <span id="popupClose" class="close-button">&times;</span>
+
+            <div id="popupMain">
+                <!-- Canvas is appended here -->
+            </div>
+        </div>
+    </div>
     
+    <script src="../scripts/recreatie.js"></script>
 </body>
 </html>

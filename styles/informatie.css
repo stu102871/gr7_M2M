@@ -35,6 +35,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+      
     }
 }
 
@@ -67,3 +68,10 @@ main {
     margin-bottom: 20px; /* Some space between sections */
 }
 
+#IMGgame {
+    max-width: 130%;
+    border-radius: 40px;
+    height: 99%;
+    margin-right: 135px;
+    border: 5px solid white; /* Adds a white border with a thickness of 5px */
+}

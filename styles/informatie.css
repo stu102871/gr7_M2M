@@ -8,8 +8,8 @@ body {
 #gameBox {
     display: flex;
     flex-direction: column; /* Items standaard onder elkaar */
-    gap: 20px; /* Ruimte tussen de divs */
-    width: 80%;
+    gap: 2px; /* Ruimte tussen de divs */
+    width: 90%;
     margin: 0 auto; /* Centreer de box op de pagina */
     background-color: #363636;
     border-radius: 20px;
@@ -18,12 +18,12 @@ body {
 
 #gameBoxLeft, #gameBoxRight {
     width: 100%; /* Zorg dat de divs dezelfde breedte hebben */
-    text-align: center; /* Centreer tekst of inhoud binnen de divs */
+    text-align: left; /* Centreer tekst of inhoud binnen de divs */
 }
 
 #gameImg {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 /* Responsive layout: divs naast elkaar op grotere schermen */
@@ -34,7 +34,12 @@ body {
         align-items: center;
     }
 
-    #gameBoxLeft, #gameBoxRight {
-        width: 45%; /* Geef beide divs 45% van de breedte */
+    #gameBoxLeft {
+        width: 400%; /* Geef beide divs 45% van de breedte */
     }
+}
+
+#verticalelijn {
+    height: 100%;
+    width: 100%;
 }

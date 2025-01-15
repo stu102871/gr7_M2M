@@ -20,9 +20,9 @@ const games =
     },
     {
         id   : 2,
-        title: "CombiGame Placeholder",
-        info : "Placeholder Text",
-        img  : ""
+        title: "Sublimator",
+        info : "Merge Game",
+        img  : "sublimator"
     }
 ];
 document.getElementById("gTotal").innerHTML = games.length;
@@ -105,7 +105,8 @@ const popup = {
 let game = {};
 
 let h_scores = {
-    breakout: 0
+    breakout  : 0,
+    sublimator: 0
 }
 
 
@@ -128,6 +129,13 @@ function selector(next) {
 // Prepare p5 functions for future use
 function setup() {}
 function draw() {}
+
+// Change game screen size based on window size
+function changeScreen() {
+
+    if (window.innerWidth > 920) return [800, 600, 1];
+    else return [400, 300, 0];
+}
 
 
 

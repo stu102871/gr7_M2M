@@ -41,6 +41,7 @@ game = {
     
         if (this.player.score > this.player.h_score) this.player.h_score = this.player.score;
         h_scores.breakout = this.player.h_score;
+
         this.player.score = 0;
         this.player.lives = 3;
         this.player.b_broken = 0;
@@ -534,14 +535,6 @@ function draw() {
         textAlign(RIGHT);
         text(`High Score: ${game.player.h_score}`, width-[10, 20][game.size[2]], [15, 30][game.size[2]]);
     }
-}
-
-
-// Change game screen size based on window size
-function changeScreen() {
-
-    if (window.innerWidth > 920) return [800, 600, 1];
-    else return [400, 300, 0];
 }
 
 // Conditional Random Number Generator

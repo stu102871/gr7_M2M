@@ -75,3 +75,9 @@ main {
     margin-right: 135px;
     border: 5px solid white; /* Adds a white border with a thickness of 5px */
 }
+
+
+
+#contentBox {
+    height: 50%;
+}

@@ -19,7 +19,7 @@ body {
 
 #gameImg {
     max-width: 100%;
-    border-radius: 100px;
+    border-radius: 70px;
 }
 
 /* Responsive layout: divs naast elkaar op grotere schermen */
@@ -48,3 +48,22 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Set up scrolling for the main content */
+main {
+    height: 99%; /* Take full available height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Optional padding */
+}
+
+/* Content Box adjustment */
+#contentBox {
+    margin-bottom: 20px; /* Some space between sections */
+}
+

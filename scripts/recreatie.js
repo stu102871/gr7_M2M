@@ -137,6 +137,22 @@ function changeScreen() {
     else return [400, 300, 0];
 }
 
+// Conditional Random Number Generator
+function rng(range, rounded) {
+
+    let number = Math.random() * range;
+    if (rounded) number = Math.round(number);
+
+    return number;
+}
+
+// Direction Logic Converter
+function degreesToRadians(input, invert) {
+
+    if (!invert) return input * (Math.PI / 180);
+    else return input * (180 / Math.PI);
+}
+
 
 
 

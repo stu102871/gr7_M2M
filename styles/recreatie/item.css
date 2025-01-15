@@ -80,38 +80,26 @@ body {
 }
 /* Game Popup */
 #gamePopup {
-    display: none; /* Standaard verborgen */
-    width: 100vw;
-    height: 100vh;
-
-    position: fixed;
-    left: 0;
-    top: 0;
-
-    background-color: rgba(0, 0, 0, 0.9);
-
-    z-index: 1000;
-
+    display: none;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
 }
 
 #popupContent {
-    width: fit-content;
-    height: fit-content;
-    min-width: 625px;
-    min-height: 500px;
-
-    background-color: #363636;
-    border-radius: 50px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    position: relative;
-    padding: 50px;
-    padding-top: 20px;
+    background: #222;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
+    width: 90%;
 }
 
 .close-button {
@@ -150,19 +138,121 @@ body {
 }
 
 
-/* Extra Knop om te spelen (optioneel) */
+/* Stijlvolle Play Button */
 #playButton {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #f44336;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
     color: white;
+    background: linear-gradient(135deg, #ff5722, #e91e63);
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease, box-shadow 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
 #playButton:hover {
-    background-color: #d32f2f;
+    background: linear-gradient(135deg, #e91e63, #ff5722);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
+#playButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Glanzend Effect */
+#playButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    opacity: 0.3;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    border-radius: 50px;
+}
+
+#playButton:hover::after {
+    transform: scaleX(1);
+}
+/* Algemeen voor audio elementen */
+audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background: #333; /* Donkere achtergrond */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    outline: none;
+    position: relative;
+    padding: 5px;
+}
+
+/* De vooruitgangsbalk (de gemarkeerde vooruitgang) */
+audio::-webkit-media-controls-panel {
+    background-color: #333; /* Donkere achtergrond voor het controlepaneel */
+    border-radius: 10px;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #ff4d4d; /* Mooie roodachtige kleur voor de play knop */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+    background-color: #e60000; /* Rood wanneer er over de knop wordt geborreld */
+}
+
+audio::-webkit-media-controls-volume-slider {
+    background-color: #555; /* De volumeregelaar krijgt een donkere achtergrond */
+    border-radius: 5px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #fff; /* Maak de tijd weer zichtbaar */
+}
+
+/* Voor extra customisatie van de voortgangsbalk */
+audio::-webkit-progress-bar {
+    background-color: #444;
+    border-radius: 5px;
+    height: 8px;
+}
+
+audio::-webkit-progress-value {
+    background-color: #ff4d4d; /* Mooie kleur voor de voortgangsbalk */
+    border-radius: 5px;
+}
+
+/* Zorg ervoor dat het audio-element mooi uitlijnt en zichtbaar is */
+audio {
+    margin-top: 20px;
+}
+
+#ebooksgrid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.EBOOKGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 400px); 
+    gap: 40px; 
+    width: fit-content; 
+}

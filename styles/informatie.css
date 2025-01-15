@@ -16,6 +16,10 @@ body {
     display: flex;
 }
 
+#gameBoxLeft {
+    width: 70%;
+    height: 100%;
+}
 
 
 #gameSystemBox {

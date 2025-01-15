@@ -1,52 +1,40 @@
 body {
     background-image: url(../media/images/bg/bg_info.png);
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 #gameBox {
-    width: 160%;
-    height: 52%;
-    
-    margin: center;
-    transform: translateX(-50%);
-
+    display: flex;
+    flex-direction: column; /* Items standaard onder elkaar */
+    gap: 20px; /* Ruimte tussen de divs */
+    width: 80%;
+    margin: 0 auto; /* Centreer de box op de pagina */
     background-color: #363636;
-    border-radius: 50px;
-    padding: 50px;
-
-    display: flex;
+    border-radius: 20px;
+    padding: 20px;
 }
 
-#gameBoxLeft {
-    width: 70%;
-    height: 100%;
+#gameBoxLeft, #gameBoxRight {
+    width: 100%; /* Zorg dat de divs dezelfde breedte hebben */
+    text-align: center; /* Centreer tekst of inhoud binnen de divs */
 }
 
-
-#gameSystemBox {
-    font-size: 30px;
-}
-#gameTitleLine {
-    margin-top: 10px;
-    margin-bottom: 20px;
+#gameImg {
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-#gameTitle {
-    font-size: 30px;
-    margin-bottom: 10px;
+/* Responsive layout: divs naast elkaar op grotere schermen */
+@media (min-width: 768px) {
+    #gameBox {
+        flex-direction: row; /* Items naast elkaar */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #gameBoxLeft, #gameBoxRight {
+        width: 45%; /* Geef beide divs 45% van de breedte */
+    }
 }
-
-
-
-
-#gameBoxRight {
-    height: 100%;
-    aspect-ratio: 0 / 1;
-    display: flex;
-    justify-content: right;
-}
-
-
-
-
-
-

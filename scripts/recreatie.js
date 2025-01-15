@@ -179,7 +179,7 @@ popup.element.addEventListener("click", (event) => {
 })
 
 
-
+      
 
 // Display first game
 gameOutput.write();

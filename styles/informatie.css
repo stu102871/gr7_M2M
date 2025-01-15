@@ -10,15 +10,11 @@ body {
     flex-direction: column; /* Items standaard onder elkaar */
     gap: 2px; /* Ruimte tussen de divs */
     width: 90%;
+    height: fit-content;
     margin: 0 auto; /* Centreer de box op de pagina */
     background-color: #363636;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-#gameBoxLeft, #gameBoxRight {
-    width: 100%; /* Zorg dat de divs dezelfde breedte hebben */
-    text-align: left; /* Centreer tekst of inhoud binnen de divs */
+    border-radius: 50px;
+    padding: 50px;
 }
 
 #gameImg {
@@ -31,15 +27,24 @@ body {
     #gameBox {
         flex-direction: row; /* Items naast elkaar */
         justify-content: space-between;
-        align-items: center;
     }
 
-    #gameBoxLeft {
-        width: 400%; /* Geef beide divs 45% van de breedte */
+    #gameBoxRight {
+        width: 30%; /* Geef beide divs 45% van de breedte */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-#verticalelijn {
-    height: 100%;
-    width: 100%;
+
+.vertInfoLine {
+    height: 350px; /* % werkt niet, gebruik px om perfect te laten passen */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.horInfoLine {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

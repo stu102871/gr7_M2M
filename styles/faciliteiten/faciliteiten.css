@@ -19,10 +19,10 @@ body {
     box-shadow: 0.1% 0.1% 0.42% rgba(0, 0, 0, 0.2); /* 2px, 2px, 8px / 1920px */
     color: white;
 
-    /* Positioning */
+    /* Positioning vam box*/
     position: absolute;
-    top: 20.42%; /* 200px / 1920px */
-    left: 21.35%; /* 410px / 1920px */
+    top: 20%; 
+    left: 21.35%; 
 }
 
 .factexth1 {
@@ -37,6 +37,22 @@ body {
     top: 30.13%; /* 60px / 1920px */
     left: 6%; /* 30px / 1920px */
 }
+.fotosauna{
+    background-image: url(/media/imgfaciliteiten/sauna.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    
+
+   position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /* Faciliteit 2 */
 .faciliteit2 {
@@ -49,23 +65,37 @@ body {
     box-shadow: 0.1% 0.1% 0.42% rgba(0, 0, 0, 0.2);
     color: white;
 
-    /* Positioning */
+    
     position: absolute;
-    top: 20.42%; 
-    left: 47.4%; /* 910px / 1920px */
+    top: 20%; 
+    left: 47.4%; 
 }
 
 .factexth2 {
     position: absolute;
-    top: 6.50%; /* 10px / 1920px */
-    left: 6%; /* 30px / 1920px */
-    font-size: 120.%; /* 30px / 1920px */
+    top: 6.50%; 
+    left: 6%; 
+    font-size: 120.%; 
 }
 
 .factextp2 {
     position: absolute;
-    top: 3.13%;
-    left: 0.52%;
+    top: 30.13%; 
+    left: 6%; 
+}
+.fotomassage{
+    background-image: url(/media/imgfaciliteiten/massage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+
+   position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Faciliteit 3 */
@@ -79,23 +109,37 @@ body {
     box-shadow: 0.1% 0.1% 0.42% rgba(0, 0, 0, 0.2);
     color: white;
 
-    /* Positioning */
+    
     position: absolute;
-    top: 48.65%; /* 550px / 1920px */
+    top: 47%; 
     left: 21.35%;
 }
 
 .factexth3 {
     position: absolute;
-    top: 6.50%; /* 10px / 1920px */
-    left: 6%; /* 30px / 1920px */
-    font-size: 120.%; /* 30px / 1920px */
+    top: 6.50%; 
+    left: 6%; 
+    font-size: 120.%; 
 }
 
 .factextp3 {
     position: absolute;
-    top: 3.13%;
-    left: 1.56%;
+    top: 30.13%; 
+    left: 6%; 
+}
+.fotopedicure{
+    background-image: url(/media/imgfaciliteiten/pedicure.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+
+   position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Faciliteit 4 */
@@ -109,25 +153,38 @@ body {
     box-shadow: 0.1% 0.1% 0.42% rgba(0, 0, 0, 0.2);
     color: white;
 
-    /* Positioning */
+  
     position: absolute;
-    top: 48.65%; 
+    top: 47%; 
     left: 47.4%;
 }
 
 .factexth4 {
     position: absolute;
-    top: 6.50%; /* 10px / 1920px */
-    left: 6%; /* 30px / 1920px */
-    font-size: 200.%; /* 30px / 1920px */
+    top: 6.50%; 
+    left: 6%;
+    font-size: 200.%; 
 }
 
 .factextp4 {
     position: absolute;
-    top: 3.13%;
-    left: 1.56%;
+    top: 30.13%; 
+    left: 6%; 
 }
+.fotoBibliotheek{
+    background-image: url(/media/imgfaciliteiten/bibliotheek.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
 
+   position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 /* Faciliteit 5 */
 .faciliteit5 {
     width: 19.79%; /* 380px / 1920px */
@@ -139,23 +196,37 @@ body {
     box-shadow: 0.1% 0.1% 0.42% rgba(0, 0, 0, 0.2);
     color: white;
 
-    /* Positioning */
+    
     position: absolute;
-    top: 76.88%; /* 900px / 1920px */
+    top: 74%; 
     left: 21.35%;
 }
 
 .factexth5 {
     position: absolute;
-    top: 6.50%; /* 10px / 1920px */
-    left: 6%; /* 30px / 1920px */
-    font-size: 200.%; /* 30px / 1920px */
+    top: 6.50%; 
+    left: 6%; 
+    font-size: 200.%; 
 }
 
 .factextp5 {
     position: absolute;
-    top: 3.13%;
-    left: 1.56%;
+    top: 30.13%; 
+    left: 6%; 
+}
+.fotofitness{
+    background-image: url(/media/imgfaciliteiten/fitness.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+
+   position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Faciliteit 6 */
@@ -169,29 +240,43 @@ body {
     box-shadow: 0.1% 0.1% 0.42% rgba(0, 0, 0, 0.2);
     color: white;
 
-    /* Positioning */
+
     position: absolute;
-    top: 76.88%; 
+    top: 74%; 
     left: 47.4%;
 }
 
 .factexth6 {
     position: absolute;
-    top: 6.50%; /* 10px / 1920px */
-    left: 6%; /* 30px / 1920px */
-    font-size: 150.%; /* 30px / 1920px */
+    top: 6.50%; 
+    left: 6%; 
+    font-size: 150.%; 
 }
 
 .factextp6 {
     position: absolute;
-    top: 3.13%;
-    left: 1.56%;
+    top: 30.13%; 
+    left: 6%; 
+}
+.fotokids{
+    background-image: url(/media/imgfaciliteiten/kidsclub.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+
+   position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Menu */
 .menu {
     width: 23.44%; /* 450px / 1920px */
-    height: 90%; /* 910px / 1920px */
+    height: 78.85%; /* 910px / 1920px */
     border: 1.56% solid #333;
     border-radius: 9%; 
     padding: 0.52%; 
@@ -207,13 +292,13 @@ body {
 
 .menuh1 {
     position: absolute;
-    top: 0.52%; 
-    left: 2.6%; /* 50px / 1920px */
-    font-size: 1.56%;
+    top: 2.50%; /* 10px / 1920px */
+    left: 6%; /* 30px / 1920px */
+    font-size: 150.%; /* 30px / 1920px */
 }
 
 .menup1 {
     position: absolute;
-    top: 3.13%; 
-    left: 7.81%; /* 150px / 1920px */
+    top: 8%; 
+    left: 6%; 
 }

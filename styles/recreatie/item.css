@@ -256,3 +256,16 @@ audio {
     gap: 40px; 
     width: fit-content; 
 }
+#videogrid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.VideosGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 400px); 
+    gap: 40px; 
+    width: fit-content; 
+}

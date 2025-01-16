@@ -302,3 +302,30 @@ body {
     top: 8%; 
     left: 6%; 
 }
+
+.fotomenu{
+    background-image: url(/media/imgfaciliteiten/eetmenu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+
+   position: absolute;
+    width: 90%;
+    height: 85%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from parent */
+    display: block; /* Makes the link cover the entire div or title */
+}
+
+a:hover {
+    color: #f0c040; /* Highlight color on hover */
+    transition: color 0.3s ease;
+}

@@ -59,6 +59,7 @@ if (typeof menuBoxData === "undefined") {
     
     var keys = {};
     var spaceKeyPressed = false;
+    var buttonPressed = [false, false];
     
     // Game Objects
     var paddle = {};
@@ -333,8 +334,8 @@ function draw() {
 
         // Move paddle based on key states
         if (!game.paused) {
-            if ((keys["ArrowLeft"] || keys["a"]) && paddle.x_pos > paddle.width/2) paddle.x_pos -= paddle.speed;
-            else if ((keys["ArrowRight"] || keys["d"]) && paddle.x_pos < width-paddle.width/2) paddle.x_pos += paddle.speed;
+            if ((keys["ArrowLeft"] || keys["a"] || buttonPressed[0]) && paddle.x_pos > paddle.width/2) paddle.x_pos -= paddle.speed;
+            else if ((keys["ArrowRight"] || keys["d"] || buttonPressed[1]) && paddle.x_pos < width-paddle.width/2) paddle.x_pos += paddle.speed;
         }
         
 
@@ -555,7 +556,13 @@ function mousePressed() {
         }
     
     }
-    else if (game.start && game.paused) game.paused = false;
+    else if (
+        game.start &&
+        mouseX >= 0 && mouseX <= width &&
+        mouseY >= 0 && mouseY <= height
+    ) {
+        game.paused = !game.paused;
+    }
 }
 
 
@@ -581,7 +588,38 @@ document.addEventListener("keyup", (event) => {
 });
 
 
+// Register pressing the buttons
+popup.controls.arrows[0].addEventListener("mousedown", () => {
 
+    buttonPressed[0] = true;
+    buttonPressed[1] = false;
+});
+popup.controls.arrows[1].addEventListener("mousedown", () => {
+
+    buttonPressed[1] = true;
+    buttonPressed[0] = false;
+});
+
+popup.controls.arrows[0].addEventListener("mouseleave", () => {
+
+    buttonPressed[0] = false;
+    buttonPressed[1] = false;
+});
+popup.controls.arrows[1].addEventListener("mouseleave", () => {
+
+    buttonPressed[1] = false;
+    buttonPressed[0] = false;
+});
+
+document.addEventListener("mouseup", () => {
+
+    buttonPressed[0] = false;
+    buttonPressed[1] = false;
+});
+
+
+// Activate Controls
+popup.controls.activate(["arrows"]);
 
 // Start the Game
 setup();

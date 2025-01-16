@@ -46,7 +46,7 @@ const gameOutput = {
         this.info.innerHTML  = games[cGame].info;
         this.img.src         = `../media/images/recreatie/games/${games[cGame].img}.png`;
 
-        selectBox.index.innerHTML = cGame+1;
+        selectBox.index.innerHTML = games[cGame].id;
     },
     
     loadScript  : function() {
@@ -72,6 +72,26 @@ const popup = {
     element : document.getElementById("gamePopup"),
     content : document.getElementById("popupMain"),
     closeBtn: document.getElementById("popupClose"),
+
+    controls: {
+        arrows    : document.getElementsByClassName("popupArrows"),
+
+        activate  : function(type) {
+
+            type.forEach(item => {
+                
+                switch (item) {
+
+                    case "arrows": this.arrows.forEach(arrow => arrow.style.display = "unset"); break;
+                    default      : break;
+                }
+            });
+        },
+        deactivate: function() {
+
+            this.arrows.forEach(arrow => arrow.style.display = "none");
+        }
+    },
 
     script  : undefined,
     loaded  : false,
@@ -133,8 +153,12 @@ function draw() {}
 // Change game screen size based on window size
 function changeScreen() {
 
-    if (window.innerWidth > 920) return [800, 600, 1];
-    else return [400, 300, 0];
+    // Ternary Operator
+    return (window.innerWidth > 920) ? [800, 600, 1] : [400, 300, 0]; 
+
+    // Standard IF Statement Notation
+    // if (window.innerWidth > 920) return [800, 600, 1];
+    // else return [400, 300, 0];
 }
 
 // Conditional Random Number Generator
@@ -149,8 +173,12 @@ function rng(range, rounded) {
 // Direction Logic Converter
 function degreesToRadians(input, invert) {
 
-    if (!invert) return input * (Math.PI / 180);
-    else return input * (180 / Math.PI);
+    // Ternary Operator
+    return (!invert) ? input * (Math.PI / 180) : input * (180 / Math.PI);
+
+    // Standard IF Statement Notation
+    // if (!invert) return input * (Math.PI / 180);
+    // else return input * (180 / Math.PI);
 }
 
 

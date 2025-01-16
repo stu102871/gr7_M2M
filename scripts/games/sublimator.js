@@ -37,6 +37,11 @@ if (typeof starData === "undefined") {
 
     var starData = [];
     var gridSquareData = {};
+    var bombs = {
+        image: [],
+        name : ["Gunpowder", "Molotov", "Grenade", "C4", "Dynamite", "TNT", "Nuclear Bomb", "Thermonuclear Bomb"],
+        value: [1, 4, 5, 10, 15, 50, 250, 1000]
+    };
 
 }
 
@@ -51,9 +56,44 @@ if (typeof gridSquareArray === "undefined") {
 
     var GridSquare = class {
 
-        constructor() {
+        constructor(x_pos, y_pos) {
 
+            this.x_pos  = x_pos;
+            this.y_pos  = y_pos;
 
+            this.edges  = {
+                left  : x_pos,
+                right : x_pos + gridSquareData.width,
+                top   : y_pos,
+                bottom: y_pos + gridSquareArray.height
+            }
+
+            this.bomb = {
+                filled: false,
+                bombID: undefined
+            }
+        }
+
+        bombChange(change, bombID) {
+
+            switch (change) {
+                case "add":
+                    this.bomb.filled = true;
+                    this.bomb.bombID = bombID;
+                    break;
+                case "merge":
+                    this.bomb.filled = true;
+                    this.bomb.bombID = bombID++;
+                    break;
+                case "remove":
+                    this.bomb.filled = false;
+                    this.bomb.bombID = undefined;
+                    break;
+                default:
+                    break;
+            }
+
+            if (this.bomb.filled) undefined // Display Image
         }
     }
 
@@ -76,6 +116,8 @@ function setup() {
 
 
     // Reset Setup Arrays
+    starData = [];
+    gridSquareArray = [];
 
 
     if (game.start) {
@@ -102,6 +144,10 @@ function setup() {
     }
 }
 
+
+
+
+// EVENT LISTENERS
 
 // Adjust game window size dynamically
 window.addEventListener("resize", function() {

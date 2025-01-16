@@ -537,22 +537,6 @@ function draw() {
     }
 }
 
-// Conditional Random Number Generator
-function rng(range, rounded) {
-
-    let number = Math.random() * range;
-    if (rounded) number = Math.round(number);
-
-    return number;
-}
-
-// Direction Logic Converter
-function degreesToRadians(input, invert) {
-
-    if (!invert) return input * (Math.PI / 180);
-    else return input * (180 / Math.PI);
-}
-
 
 
 /* EVENT LISTENERS */
@@ -599,6 +583,7 @@ document.addEventListener("keydown", (event) => {
 document.addEventListener("keyup", (event) => {
     if (game.start) keys[event.key] = false;
 });
+
 
 
 

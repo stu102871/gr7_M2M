@@ -19,7 +19,7 @@ body {
 
 #gameImg {
     max-width: 100%;
-    border-radius: 100px;
+    border-radius: 70px;
 }
 
 /* Responsive layout: divs naast elkaar op grotere schermen */
@@ -35,6 +35,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+      
     }
 }
 
@@ -47,4 +48,36 @@ body {
 .horInfoLine {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Set up scrolling for the main content */
+main {
+    height: 99%; /* Take full available height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Optional padding */
+}
+
+/* Content Box adjustment */
+#contentBox {
+    margin-bottom: 20px; /* Some space between sections */
+}
+
+#IMGgame {
+    max-width: 130%;
+    border-radius: 40px;
+    height: 99%;
+    margin-right: 135px;
+    border: 5px solid white; /* Adds a white border with a thickness of 5px */
+}
+
+
+
+#contentBox {
+    height: 50%;
 }

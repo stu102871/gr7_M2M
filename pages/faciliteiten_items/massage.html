@@ -6,6 +6,38 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../../styles/main.css">
+    <style>
+        /* General body and html styles */
+        html, body {
+            background-image: url(/media/imgfaciliteiten/massage.png);
+            height: 100%; 
+            margin: 0; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            background-color: #f0f0f0; 
+        }
+
+        /* Box container */
+        #contentBox {
+            width: 60%; 
+            height: 70%;
+            background-color: #333;
+            border-radius: 15px; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            color: white;
+            padding: 20px;
+            margin-left: 20%;
+        }
+
+        /* Content inside the box */
+        #contentBox h1 {
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -53,12 +85,14 @@
             <div class="title-font" id="titleInnerBox">
                 Red Frontier
                 <div class="vert-line" id="titleDivider"></div>
-                Massagestoelen
+                massage Ruimte
             </div>
         </div>
 
         <!-- Page Content -->
-        <div id="contentBox"></div>
+        <div id="contentBox">
+            <h1>Welcome to the massage Ruimte!</h1>
+        </div>
     </main>
 
 </body>

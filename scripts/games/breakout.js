@@ -4,10 +4,8 @@
 To be able to relaunch the game after closing, it will now first check if a global variable has been declared prior before declaring it again to avoid re-declaration errors.
 This means all GLOBAL VARIABLES will use var instead of let or const, as to allow their scope to reach outside of said re-declaration checks.
 
-Many variables declared inside functions also use var instead of let or const. This is simply a (bad) habit of mine that stems from using GameMaker.
-In GameMaker you use var to declare temporary variables. This is useful to avoid storing unnessesary variables in an object.
-Since I added the re-declaration checks much later into development, all those var declarations have already been made and I don't feel like changing all of them at this stage.
-I hope I will remember to pay closer mind to which type of declaration to use now that I know the difference between let and var.
+Fun Fact: I usually only use var in GameMaker, as it ironically is the default syntax for declaring local temporary variables inside an object.
+So they have a smaller scope in GameMaker, rather than a bigger one like in Javascript.
 */
 
 /* GLOBAL VARIABLES */
@@ -130,7 +128,7 @@ function setup() {
     if (game.start) {
 
         // Level prep
-        var level;
+        let level;
         if (game.level.current == 3) level = game.level.sub;
         else level = game.level.current;
 
@@ -235,7 +233,7 @@ function setup() {
         };
         
         // Create brick objects
-        var max_width = [];
+        let max_width = [];
         for (let i=0; i < brickData.colums.length; i++) {
 
             // Determine the width off all bricks in the row
@@ -268,9 +266,7 @@ function setup() {
 
         for (let i=0; i < game.level.total; i++) {
 
-            var label;
-            if (i == game.level.total-1) label = "Oneindig";
-            else label = `Level ${i+1}`;
+            let label = (i == game.level.total-1) ? label = "Oneindig" : label = `Level ${i+1}`;
 
             menuBoxes.push({
                 size : menuBoxData.size,
@@ -399,10 +395,10 @@ function draw() {
             )
             {
 
-                var base_angle = 270;
-                var max_offset = 75;
+                const base_angle = 270;
+                const max_offset = 75;
 
-                var colCalc = (ball.x_pos - paddle.x_pos) / (paddle.width / 2);
+                const colCalc = (ball.x_pos - paddle.x_pos) / (paddle.width / 2);
 
                 ball.direction = degreesToRadians(base_angle + (max_offset * colCalc), false);
 
@@ -413,8 +409,8 @@ function draw() {
 
 
         // Draw bricks
-        var colOnFrame = false;
-        var b_broken = 0;
+        let colOnFrame = false;
+        let b_broken = 0;
         bricks.forEach(item => {
 
             // Create the brick if it hasn't been broken yet
@@ -433,17 +429,17 @@ function draw() {
                 ) {
                     
                     // Calculate penetration depths
-                    var penX = Math.min(
+                    const penX = Math.min(
                         ball.edge.right - item.x_pos,            // Left
                         item.x_pos + item.width - ball.edge.left // Right
                     )
-                    var penY = Math.min(
+                    const penY = Math.min(
                         ball.edge.bottom - item.y_pos,           // Top
                         item.y_pos + item.height - ball.edge.top // Bottom
                     );
 
                     // Determine Collision type
-                    var colType;
+                    let colType;
                     if (penX > penY) colType = "vert";
                     else if (penX < penY) colType = "hor";
 

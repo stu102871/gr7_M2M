@@ -266,7 +266,7 @@ function setup() {
 
         for (let i=0; i < game.level.total; i++) {
 
-            let label = (i == game.level.total-1) ? label = "Oneindig" : label = `Level ${i+1}`;
+            let label = (i == game.level.total-1) ? "Oneindig" : `Level ${i+1}`;
 
             menuBoxes.push({
                 size : menuBoxData.size,

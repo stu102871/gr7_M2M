@@ -74,7 +74,7 @@ const popup = {
     closeBtn: document.getElementById("popupClose"),
 
     controls: {
-        arrows    : document.getElementsByClassName("popupArrows"),
+        arrows    : document.getElementsByClassName("popupArrowBox"),
 
         activate  : function(type) {
 

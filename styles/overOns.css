@@ -1,3 +1,40 @@
 body {
     background-image: url(../media/images/bg/bg_overOns.png);
 }
+
+
+main {
+    overflow-y: auto;
+}
+
+
+
+.personBox {
+    height: 40%;
+    width: 83%;
+
+    margin-bottom: 6.8%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #363636;
+    border-radius: 50px;
+    padding: 50px;
+
+    display: flex;
+}
+.imageBox {
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    background-color: white;
+    border-radius: 25px;
+}
+.names {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#fknRuimte {
+    height: 1px;
+}

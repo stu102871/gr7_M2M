@@ -1,7 +1,7 @@
 "use strict";
 
 // Theme: Methods of Destruction to sublimate the ice on Mars' poles
-// 
+
 
 // GLOBAL VARIABLES
 
@@ -36,7 +36,10 @@ game = {
 if (typeof starData === "undefined") {
 
     var starData = [];
+    var poleData = [];
+
     var gridSquareData = {};
+
     var bombs = {
         image: [],
         name : ["Gunpowder", "Molotov", "Grenade", "C4", "Dynamite", "TNT", "Nuclear Bomb", "Thermonuclear Bomb"],
@@ -63,9 +66,9 @@ if (typeof gridSquareArray === "undefined") {
 
             this.edges  = {
                 left  : x_pos,
-                right : x_pos + gridSquareData.width,
+                right : x_pos + gridSquareData.size,
                 top   : y_pos,
-                bottom: y_pos + gridSquareArray.height
+                bottom: y_pos + gridSquareData.size
             }
 
             this.bomb = {
@@ -116,16 +119,23 @@ function setup() {
 
 
     // Reset Setup Arrays
-    starData = [];
     gridSquareArray = [];
+    
 
+    if (game.start) {// Grid Squares Prep
 
-    if (game.start) {
+        gridSquareData = {
+            size  : [40, 80][game.size[2]],
+            sx_pos: undefined,
+            sy_pos: undefined
+        }
+        gridSquareData.sx_pos = width/4 - gridSquareData.size/2;
+
+    } else {
 
         // Background stars setup
         starData = [];
         for (let i = 0; i < 500; i++) {
-
             starData.push({
                 size   : [rng(2, false)+1, rng(4, false)+2][game.size[2]],
                 x_pos  : rng(width, false),
@@ -135,13 +145,51 @@ function setup() {
             });
         }
 
+        // Background Mars Setup
+        fill(255, 60, 0);
+        circle(width*2, width*2, width/2, height-50);
+
+
+        // Background Pole Setup
+        poleData = [];
+
+    }
+}
+
+function draw() {
+
+    // Draw the background
+    background(0);
+
+    // Draw background stars
+    for (let i=0; i < starData.length; i++) {
+
+        // Low opacity
+        starData[i].colour.setAlpha(starData[i].opacity/2);
+        fill(starData[i].colour);
+        circle(starData[i].x_pos, starData[i].y_pos, starData[i].size*2);
+
+        // Medium opacity
+        starData[i].colour.setAlpha(starData[i].opacity);
+        fill(starData[i].colour);
+        circle(starData[i].x_pos, starData[i].y_pos, starData[i].size*1);
+
+        // Full opacity
+        starData[i].colour.setAlpha(255);
+        fill(starData[i].colour);
+        circle(starData[i].x_pos, starData[i].y_pos, starData[i].size*0.5);
+    }
+
+    if (game.start) {
+
     }
 
 
-    // Grid Squares Prep
-    gridSquareData = {
-        width: [][game.size[2]]
-    }
+    // Display Title
+    fill('white');
+    textSize([25, 50][game.size[2]]);
+    textAlign(CENTER, CENTER);
+    text("OFES Sublimator", width/2, [50, 100][game.size[2]]);
 }
 
 
@@ -159,6 +207,8 @@ window.addEventListener("resize", function() {
     setup();
 });
 
-// Start Game
 
-// Stop Game
+
+
+// Start Game
+setup();

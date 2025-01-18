@@ -1,83 +1,39 @@
 body {
     background-image: url(../media/images/bg/bg_info.png);
-    background-size: cover;
-    margin: 0;
-    font-family: Arial, sans-serif;
 }
 
-#gameBox {
-    display: flex;
-    flex-direction: column; /* Items standaard onder elkaar */
-    gap: 2px; /* Ruimte tussen de divs */
+main {
+    overflow-y: auto;
+}
+
+
+
+.personBox {
+    min-height: 64%;
     width: 90%;
-    height: fit-content;
-    margin: 0 auto; /* Centreer de box op de pagina */
+
+    margin-bottom: 6.8%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
     background-color: #363636;
     border-radius: 50px;
     padding: 50px;
+
+    display: flex;
+}
+.imageBox {
+    width: 23%;
+    border-radius: 25px;
+}
+.imageBox img {
+    width: 100%;
+}
+.names {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
-#gameImg {
-    max-width: 100%;
-    border-radius: 70px;
-}
-
-/* Responsive layout: divs naast elkaar op grotere schermen */
-@media (min-width: 768px) {
-    #gameBox {
-        flex-direction: row; /* Items naast elkaar */
-        justify-content: space-between;
-    }
-
-    #gameBoxRight {
-        width: 30%; /* Geef beide divs 45% van de breedte */
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      
-    }
-}
-
-
-.vertInfoLine {
-    height: 350px; /* % werkt niet, gebruik px om perfect te laten passen */
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.horInfoLine {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/* Ensure the body and html take up the full height */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/* Set up scrolling for the main content */
-main {
-    height: 99%; /* Take full available height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding: 20px; /* Optional padding */
-}
-
-/* Content Box adjustment */
-#contentBox {
-    margin-bottom: 20px; /* Some space between sections */
-}
-
-#IMGgame {
-    max-width: 130%;
-    border-radius: 40px;
-    height: 99%;
-    margin-right: 135px;
-    border: 5px solid white; /* Adds a white border with a thickness of 5px */
-}
-
-
-
-#contentBox {
-    height: 50%;
+#fknRuimte {
+    height: 1px;
 }

@@ -147,7 +147,11 @@ function selector(next) {
 }
 
 // Prepare p5 functions for future use
-function setup() {}
+function setup() {
+
+    let gameFont = loadFont("../media/fonts/Orbitron.ttf");
+    textFont(gameFont);
+}
 function draw() {}
 
 // Change game screen size based on window size

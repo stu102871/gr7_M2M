@@ -480,7 +480,7 @@ function draw() {
         else text(`Level: ${game.level.current+1}`, width-[10, 20][game.size[2]], [10, 20][game.size[2]]);
 
         text(`Score: ${game.player.score}`, width-[10, 20][game.size[2]], [25, 50][game.size[2]]);
-        text(`Lives: ${game.player.lives}`, width-[10, 20][game.size[2]], [40, 80][game.size[2]]);
+        text(`Levens: ${game.player.lives}`, width-[10, 20][game.size[2]], [40, 80][game.size[2]]);
 
         if (game.paused) {
             text("Gepauzeerd", width-[10, 20][game.size[2]], height-[10, 20][game.size[2]]);

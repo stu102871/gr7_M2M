@@ -80,23 +80,43 @@ if (typeof gridSquareArray === "undefined") {
         bombChange(change, bombID) {
 
             switch (change) {
+
                 case "add":
                     this.bomb.filled = true;
                     this.bomb.bombID = bombID;
                     break;
+
                 case "merge":
                     this.bomb.filled = true;
                     this.bomb.bombID = bombID++;
                     break;
+
                 case "remove":
                     this.bomb.filled = false;
                     this.bomb.bombID = undefined;
                     break;
+                    
                 default:
                     break;
             }
 
             if (this.bomb.filled) undefined // Display Image
+        }
+    }
+
+
+    var poleStuffArray = [];
+
+    var PoleStuff = class {
+
+        constructor(column, row, x_pos, y_pos) {
+            this.column = column;
+            this.row = row;
+
+            this.x_pos = x_pos;
+            this.y_pos = y_pos;
+
+            this.sublimated = false;
         }
     }
 
@@ -116,44 +136,42 @@ function setup() {
     
     noStroke();
     frameRate(75);
-
-
-    // Reset Setup Arrays
-    gridSquareArray = [];
     
 
-    if (game.start) {// Grid Squares Prep
-
-        gridSquareData = {
-            size  : [40, 80][game.size[2]],
-            sx_pos: undefined,
-            sy_pos: undefined
-        }
-        gridSquareData.sx_pos = width/4 - gridSquareData.size/2;
-
-    } else {
-
-        // Background stars setup
-        starData = [];
-        for (let i = 0; i < 500; i++) {
-            starData.push({
-                size   : [rng(2, false)+1, rng(4, false)+2][game.size[2]],
-                x_pos  : rng(width, false),
-                y_pos  : rng(height, false),
-                colour : color(rng(100, true)+150, rng(100, true)+150, rng(100, true)+150),
-                opacity: rng(50, true) 
-            });
-        }
-
-        // Background Mars Setup
-        fill(255, 60, 0);
-        circle(width*2, width*2, width/2, height-50);
-
-
-        // Background Pole Setup
-        poleData = [];
-
+    // Background stars setup
+    starData = [];
+    for (let i = 0; i < 500; i++) {
+        starData.push({
+            size   : [rng(2, false)+1, rng(4, false)+2][game.size[2]],
+            x_pos  : rng(width, false),
+            y_pos  : rng(height, false),
+            colour : color(rng(100, true)+150, rng(100, true)+150, rng(100, true)+150),
+            opacity: rng(50, true) 
+        });
     }
+
+
+    // Grid Squares Prep
+    gridSquareData = {
+        size  : [40, 80][game.size[2]],
+        sx_pos: undefined,
+        sy_pos: undefined
+    }
+    gridSquareData.sx_pos = width/4 - gridSquareData.size/2;
+
+
+    // Background "Ice" Setup
+    poleStuffData = {
+        size: [10, 20][game.size[2]],
+
+        sx_pos: undefined,
+        sy_pos: undefined
+    };
+
+}
+function gameStartSetup() {
+
+    // Generate Bombs
 }
 
 function draw() {
@@ -182,10 +200,25 @@ function draw() {
 
     if (game.start) {
 
+        // Draw Mars
+        fill(255, 60, 0);
+        circle(width/2, height*2.75, width*3);
+
+        // Draw "Ice"
+
+
+        // Draw Grid
+
+        
+        // Draw Bombs
+
     }
 
 
     // Display Title
+    fill(0);
+    rect(width/2 - [130, 260][game.size[2]], [30, 60][game.size[2]], [260, 520][game.size[2]], [50, 100][game.size[2]]);
+
     fill('white');
     textSize([25, 50][game.size[2]]);
     textAlign(CENTER, CENTER);
@@ -197,6 +230,12 @@ function draw() {
 
 // EVENT LISTENERS
 
+function mousePressed() {
+
+    if (mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height) game.start = true;
+    gameStartSetup();
+}
+
 // Adjust game window size dynamically
 window.addEventListener("resize", function() {
 
@@ -206,6 +245,12 @@ window.addEventListener("resize", function() {
     game.start = false;
     setup();
 });
+
+// Stop the Game
+document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") game.start = false;
+})
 
 
 
